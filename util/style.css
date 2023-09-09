@@ -1,0 +1,786 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-color: #46244C;
+    --color-primary-variant: #712B75;
+    --secondary-color: #C74B50;
+    --tertiary-color: #180A0A;
+    --accent-color: #D49B54;
+    --color-black: #0a0a0c;
+    --color-dark: #62656a;
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.8);
+
+    --width: 84%;
+    --mobile-width: 84%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-dark);
+    background: var(--color-white);
+}
+
+.container {
+    width: var(--width);
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    color: var(--color-black);
+    transition: all 300ms ease;
+}
+
+h1, h2, h3, h4, h5 {
+    color: var(--color-black);
+    font-family: 'Abhaya Libre', serif;
+    font-weight: 800;
+}
+
+h1 {
+    font-size: 6rem;
+    letter-spacing: -0.4rem;
+    line-height: 0.8;
+}
+
+h2 {
+    font-size: 3.2rem;
+    letter-spacing: -0.2rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4, h5 {
+    font-size: 1.4rem;
+    font-family: "poppins", sans-serif;
+    font-weight: 500;
+}
+
+h5 {
+    font-size: 0.9rem;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    font-size: 500;
+    background: var(--color-black);
+    color: var(--color-white);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.btn:hover {
+    background: var(--color-white);
+    color: var(--color-black);
+    border: 1px solid var(--color-black);
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--color-white);
+}
+
+section {
+    max-width: 100vw;
+    margin: 10rem 0;
+    /* padding: 12rem 0 0; */
+}
+
+/* ============= NAVBAR ============= */
+nav {
+    width: 100vw;
+    height: 5rem;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    z-index: 2;
+    background: var(--color-white);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05);
+    top: 0;
+}
+
+nav button {
+    display: none;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .container ul {
+    display: flex;
+    gap: 3rem;
+}
+
+nav .container ul a {
+    padding: 0 0 0.3rem;
+
+}
+
+nav .container ul a.active {
+    border-bottom: 2px solid var(--color-white);
+}
+
+nav a:hover {
+    color: var(--color-primary-variant);
+}
+
+nav .icons {
+    display: flex;
+    gap: 2rem;
+    font-size: 1.2rem;
+}
+
+/* ============= HEADER ============= */
+header {
+    height: 100vh;
+    max-width: 100vw;
+    position: relative;
+    top: 5rem;
+    display: grid;
+    place-items: center;
+}
+
+header .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    max-height: 100%;
+    margin-top: -3rem;
+}
+
+header .container .info .delivery {
+    background: var(--accent-color);
+    width: max-content;
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+    color: var(--color-white);
+    margin-bottom: 2.5rem;
+}
+
+header .container .info .delivery i {
+    color: var(--color-white);
+    display: inline-block;
+}
+
+header .container .info p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 1rem 0 2rem;
+}
+
+header .container .info .cta {
+    display: flex;
+    align-items: center;
+}
+
+/* ============= CATALOG ============= */
+section#catalog .container {
+    width: 56%;
+}
+
+section#catalog .container>h2, section#catalog .container>p {
+    text-align: center;
+}
+
+section#catalog article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+section#catalog article p {
+    margin: 1.5rem 0 1rem;
+}
+
+section#catalog a {
+    color: #361500;
+    font-weight: 600;
+}
+
+section#catalog a:hover {
+    color: #603601;
+    margin-left: 0.5rem;
+}
+section#catalog a:hover::after {
+    content: ' >';
+    justify-content: center;
+}
+
+section#catalog .image img {
+    border: 2px solid #555;
+}
+
+
+section#catalog .image img:hover {
+    border: 5px solid #555;
+}
+
+
+/* ============= WHY CHOOSE US ============= */
+section#why-choose-us .container {
+    width: 70%;
+}
+
+section#why-choose-us .container>h2, section#why-choose-us .container>p {
+    text-align: center;
+}
+
+section#why-choose-us .container article {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(5, 2fr);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+section#why-choose-us .container article .reasons i {
+    font-size: 2.5rem;
+    margin: 1.5rem 0 1rem;
+    background: var(--accent-color);
+    color: #F3E9DD;
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+
+/* ============= OUR PHOTO GALLERY ============= */
+
+.swiper {
+    width: 100%;
+    height: 60%;
+    /* margin-top: 6rem; */
+}
+
+.swiper .container {
+    width: 56%;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+.swiper .container>h2, .swiper .container>p {
+    text-align: center;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper .swiper-wrapper {
+    justify-content: center;
+    height: 60%;
+}
+
+.swiper-slide img {
+    display: inline-block;
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+}
+
+.swiper-slide img:hover {
+    opacity: 0.5;
+    transition: all 300ms ease;
+}
+
+.swiper-pagination {
+    visibility: hidden;
+}
+
+.swiper-pagination-bullet {
+    background: #f24822 !important;
+}
+
+/* ============= FAQS ============= */
+section#faqs h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+section#faqs p {
+    margin-bottom: 2.5rem;
+    text-align: left;
+}
+
+section#faqs p a {
+    color: var(--primary-color);
+}
+
+section#faqs p a:hover {
+    color: var(--color-primary-variant);
+}
+
+
+section#faqs .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem
+}
+
+section#faqs .content article {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    gap: 1.4rem;
+    height: fit-content;
+    background: var(--color-primary-variant);
+    cursor: pointer;
+}
+
+section#faqs .content article h4 {
+    color: var(--color-white);
+    font-size: 1rem;
+}
+
+section#faqs .content article i {
+    color: var(--color-white);
+    font-size: 1.4rem;
+}
+
+
+section#faqs .content article p {
+    margin-top: 1rem;
+    color: var(--color-light);
+    display: none;
+}
+
+section#faqs .content article.open p {
+    display: block;
+}
+
+section#faqs a.btn {
+    display: block;
+    margin: 0 auto;
+    width: 12rem;
+    text-align: center;
+    margin-top: 4rem;
+
+}
+
+/* ============= FOOTER ============= */
+footer {
+    background: var(--color-black);
+    margin-top: 8rem;
+    padding-top: 5rem;
+    font-size: 0.9rem;
+    color: var(--color-light);
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem;
+    justify-content: space-between;
+}
+
+footer .container h4 {
+    color: var(--color-white);
+    margin-bottom: 1.6rem;
+}
+
+footer .container .f1 p {
+    margin: 1rem 0 2rem;
+}
+
+footer .container .f1 .subscribe {
+    border: 1px solid var(--color-light);
+    background: var(--color-white);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
+}
+
+footer .container .f1 .subscribe input {
+    background: transparent;
+    color: var(--color-black);
+    margin-left: 1rem;
+}
+
+footer .container .f1 .subscribe input::placeholder {
+    color: var(--color-black);
+}
+
+footer .container .f1 .subscribe button {
+    background: var(--color-black);
+    color: var(--color-white);
+    transition: all 300ms ease;
+    width: 3rem;
+    height: 100%;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+
+footer .container .f1 .subscribe button:hover {
+    background: var(--color-light);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+footer .container ul li {
+    margin-bottom: 1rem;
+}
+
+footer .container ul li a {
+    color: var(--color-light);
+}
+
+footer .container ul li a:hover {
+    color: var(--color-white);
+    text-decoration: underline;
+}
+
+footer .container .f4 p {
+    margin-bottom: 1.6rem;
+}
+
+footer .container .socials {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.4rem;
+}
+
+footer .copyright {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 1.2rem 0;
+    color: var(--color-white);
+    border-top: 0.5px solid var(--color-white);
+}
+
+/* ============= MEDIA QUERIES (TABLETS) ============= */
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 4.4rem;
+        letter-spacing: 1px;
+    }
+
+    h2 {
+        font-size: 2.7rem;
+        letter-spacing: -1px;
+    }
+
+    h3 {
+        font-size: 2.2rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    h5 {
+        font-size: 0.9rem;
+    }
+
+    p {
+        line-height: 1.6rem;
+        font-size: 0.9rem;
+    }
+
+    .container {
+        width: var(--mobile-width);
+    }
+
+    section {
+        overflow-x: hidden;
+        margin: 10rem 0;
+    }
+
+    /* ============= MEDIA QUERIES (TABLETS) - NAVBAR ============= */
+    nav .container {
+        width: 80%;
+    }
+
+    nav .container ul {
+        position: fixed;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        width: 16rem;
+        height: 100vh;
+        background: var(--primary-color);
+        box-shadow: 1rem 0 2rem rgba(0, 0, 0, 0.2);
+        display: none;
+    }
+
+    nav .container ul li {
+        height: 4.6rem;
+        display: flex;
+        align-items: center;
+    }
+
+    nav .container ul li a {
+        width: 100%;
+        padding: 0 0 1rem 2rem;
+        color: var(--color-white);
+    }
+
+    nav .container ul li a:hover {
+        padding-left: 3rem;
+    }
+
+    nav button {
+        display: inline-block;
+        cursor: pointer;
+        background: transparent;
+        color: var(--color-black);
+        margin-right: 0rem;
+        font-size: 1.6rem;
+    }
+
+    nav button#close-btn {
+        display: none;
+    }
+
+
+    /* ============= MEDIA QUERIES (TABLETS) - HEADER ============= */
+    header {
+        top: 7rem;
+        height: 40vh;
+    }
+
+    header .container {
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        margin-top: 0;
+    }
+
+    header .container .details {
+        display: none;
+    }
+
+    /* ============= MEDIA QUERIES (TABLETS) - CATALOG ============= */
+    section#catalog .container {
+        width: var(--mobile-width);
+        margin-top: 2rem;
+    }
+
+    /* ============= MEDIA QUERIES (TABLETS) - WHY CHOOSE US ============= */
+    section#why-choose-us .container {
+        width: var(--mobile-width);
+    }
+
+    section#why-choose-us .container article {
+        grid-template-columns: repeat(3, 2fr);
+    }
+
+
+    /* ============= MEDIA QUERIES (TABLETS) - SWIPER ============= */
+    .swiper {
+        height: 50%;
+    }
+
+    .swiper .container {
+        width: var(--mobile-width);
+    }
+
+    .swiper .swiper-wrapper {
+        height: 50vh;
+    }
+
+    .swiper-slide img {
+        height: 40vh;
+    }
+
+    /* ============= MEDIA QUERIES (TABLETS) - FAQS ============= */
+
+    section#faqs h2 {
+        margin-bottom: 3rem;
+    }
+
+    section#faqs .content {
+        grid-template-columns: 1fr;
+        margin-bottom: 3rem;
+    }
+
+    section#faqs .content article {
+        padding: 1.5rem;
+    }
+
+    /* ============= MEDIA QUERIES (TABLETS) - FOOTER ============= */
+    footer .container {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+    }
+
+    footer .container .socials {
+        justify-content: space-evenly;
+    }
+
+}
+
+
+/* ============= MEDIA QUERIES (MOBILE) ============= */
+@media screen and (max-width: 600px) {
+    /* h1 {
+        font-size: 3.4rem;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    h4 {
+        font-size: 2.3rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    } */
+
+    section {
+        margin: 8rem 0;
+    }
+
+    section#catalog {
+        padding-top: 12rem;
+    }
+
+    /* ============= NAVBAR - MEDIA QUERIES (MOBILE) ============= */
+    nav .container .icons {
+        gap: 1rem;
+    }
+
+    /* ============= HEADER - MEDIA QUERIES (MOBILE) ============= */
+    header {
+        height: 65vh;
+        align-items: stretch;
+        margin-bottom: 8rem;
+    }
+
+    header .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    header .delivery {
+        display: none;
+    }
+
+    header .container .info p {
+        font-size: 1rem;
+    }
+
+    header .container .header-image {
+        grid-row: 1;
+        width: 78vw;
+        margin: 0 auto;
+    }
+
+    header .container .cta {
+        justify-content: space-evenly;
+    }
+
+    /* ============= CATALOG - MEDIA QUERIES (MOBILE) ============= */
+    section#catalog .container {
+        margin-top: 2rem;
+    }
+
+    section#catalog .container article {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1.4rem;
+    }
+
+    section#catalog .container article p {
+        margin: 1rem 0;
+    }
+
+    section#catalog .container article .image {
+        width: 93%;
+        padding-left: 2.2rem;
+    }
+
+    /* ============= WHY CHOOSE US - MEDIA QUERIES (MOBILE) ============= */
+    section#why-choose-us .container article {
+        grid-template-columns: repeat(2, 2fr);
+        gap: 1rem;
+    }
+
+    /* ============= SWIPER - MEDIA QUERIES (MOBILE) ============= */
+    .swiper {
+        height: 60%;
+    }
+
+    .swiper .container {
+        width: var(--mobile-width);
+    }
+
+    .swiper .swiper-wrapper .swiper-slide {
+        width: 230px !important;
+    }
+
+    .swiper .swiper-wrapper {
+        height: 40vh;
+    }
+
+    /* ============= FOOTER - MEDIA QUERIES (MOBILE) -  ============= */
+    footer .container {
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+
+    footer .container .socials {
+        justify-content: center;
+    }
+
+
+
+}
