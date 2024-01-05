@@ -14,13 +14,13 @@ Comfy Boots presents a responsive multi-page footwear website, expertly built wi
 Clone the project
 
 ```bash
-  git clone https://github.com/hodanmohamed/yogmetic.git
+  git clone https://github.com/hodanmohamed/comfy.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd yogmetic
+  cd comfy
 ```
 
 Install dependencies
